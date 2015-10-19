@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="css/main.css">
 
-    <script src="lib/jquery-2.1.4.min.js"></script>
+    <!-- <script src="lib/jquery-2.1.4.min.js"></script> -->
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-animate.min.js"></script>
     <script src="lib/angular-resource.min.js"></script>
@@ -17,7 +17,7 @@
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
-    <script src="js/directives.js"></script>
+    <!-- <script src="js/directives.js"></script> -->
   </head>
   <body ng-app="boutique">
       <div class="page-wrap">
@@ -34,20 +34,53 @@
                   </div>
                   <nav class="navigation">
                       <ul class="navigation-list">
-                          <li>Home</li>
-                          <li>Range</li>
-                          <li>About us</li>
-                          <li>Blog</li>
-                          <li>Feedback</li>
+                          <li>
+                              <a href="#/home">HOME</a>
+                          </li>
+                          <li class="range">
+                              <span class="drop-down-indicator">Range</span>
+                              <div class="menu">
+                                  <a href="#/range/aroma">Aroma</a>
+                                  <a href="#/range/beauty">Beauty</a>
+                                  <a href="#/range/care">Care</a>
+                              </div>
+                          </li>
+                          <li><a href="#/about">About us</a></li>
+                          <li><a href="#/blog">Blog</a></li>
+                          <li><a href="#/feedback">Feedback</a></li>
                       </ul>
                   </nav>
               </header>
 
-              <div class="content" ui-view="content">
-                  
+              <div class="content ui-view-container">
+                  <div ui-view></div>
               </div>
-              <footer>
 
+              <footer>
+                  <section>
+                      <h3>HELP</h3>
+                      <ul>
+                          <li>
+                              <a href="">Contact</a>
+                          </li>
+                          <li>
+                              <a href="">Terms of Service</a>
+                          </li>
+                          <li>
+                              <a href="">Privacy Policy</a>
+                          </li>
+                          <li>
+                              <a href="">Return Policy</a>
+                          </li>
+                      </ul>
+                  </section>
+                  <section>
+                      <h3>CONNECT</h3>
+                      <ul>
+                          <li><a href="">Facebook</a></li>
+                          <li><a href="">Twitter</a></li>
+                      </ul>
+                  </section>
               </footer>
           </div>
       </div>

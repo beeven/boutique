@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("boutique",["ngResource","ngAnimate","ngSanitize","ui.router","boutique.controllers","boutique.services"])
-.config(function($stateProvider){
+.config(function($stateProvider,$urlRouterProvider){
     $stateProvider
     .state("home",{
         url:"/home",
@@ -21,15 +21,18 @@ angular.module("boutique",["ngResource","ngAnimate","ngSanitize","ui.router","bo
 
     })
     .state("about",{
-        url:"/about"
+        url:"/about",
+        templateUrl: "templates/about.html"
     })
     .state("feedback",{
-
+        url:"/feedback",
+        templateUrl: "templates/feedback.html"
     })
     .state("blog",{
+        url:"/blog",
+        templateUrl:"templates/blog.html"
+    })
 
-    })
-    .state("account",{
-        
-    })
+    $urlRouterProvider.otherwise("/home");
+
 });

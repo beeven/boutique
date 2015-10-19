@@ -1,0 +1,76 @@
+
+// .account-bar
+//     height: 41px
+//     .account-links
+//         float: right
+
+.banner
+    text-align: center
+    font-family: Georgia, serif
+
+.drop-down-indicator::before
+    content: "\02C7";
+    font-size: 16px;
+    line-height: 0;
+    position: relative;
+    left: -1px;
+    top: 6px;
+
+$menu-border = 1px solid rgb(184, 184, 184)
+$menu-text-color = rgb(28, 28, 26)
+$menu-text-color-hover = rgb(163, 149, 73)
+.navigation
+    font-family: Georgia, serif
+
+    ul.navigation-list
+        text-align: center
+        position: relative
+        margin: 0px
+        z-index: 10
+        li
+            width: 100px
+            height: 25px
+            padding: 8px
+            font-size: 15px
+            list-style-type: none
+            display: inline-block
+            color: $menu-text-color
+            cursor: pointer
+            vertical-align: bottom
+            text-transform: uppercase
+            //box-sizing: border-box
+            a, a:visited
+                display: block
+                color: $menu-text-color
+                text-decoration: none
+            a:hover
+                color: $menu-text-color-hover
+            &.range
+                span
+                    display: block
+                    border: $menu-border
+                    border-color: rgba(0,0,0,0)
+                    height: 100%
+                .menu
+                    display: none
+                    background-color: white
+                    position: absolute
+                    top: 35px
+                    width: 98px
+                    a
+                        height: 25px
+                        &:hover
+                            text-decoration: underline
+            &:hover
+                color: $menu-text-color-hover
+
+            &.range:hover
+                span
+                    color: $menu-text-color-hover
+                    border: $menu-border
+                    border-bottom-color: rgba(0,0,0,0)
+
+                .menu
+                    display: block
+                    border: $menu-border
+                    border-top-color: rgba(0,0,0,0)

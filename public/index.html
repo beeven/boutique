@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>The Boutique Company</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="lib/angular-resource.min.js"></script>
+    <script src="lib/angular-sanitize.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+  </head>
+  <body ng-app="boutique">
+      <div class="page-wrap">
+          <div class="page">
+              <header ng-controller="HeaderCtrl">
+                  <div class="account-bar">
+                      <div class="account-links">
+                          <div class="account-trigger"></div>
+                          <div class="cart-trigger"></div>
+                      </div>
+                  </div>
+                  <div class="banner">
+                      <h2>The Boutique Company</h2>
+                  </div>
+                  <nav class="navigation">
+                      <ul class="navigation-list">
+                          <li>Home</li>
+                          <li>Range</li>
+                          <li>About us</li>
+                          <li>Blog</li>
+                          <li>Feedback</li>
+                      </ul>
+                  </nav>
+              </header>
+
+              <div class="content" ui-view="content">
+                  
+              </div>
+              <footer>
+
+              </footer>
+          </div>
+      </div>
+  </body>
+</html>

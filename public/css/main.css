@@ -3,7 +3,15 @@ body {
   padding: 0px;
   margin: 0px;
 }
+.account-bar {
+  height: 20px;
+  padding-left: 50px;
+  font-style: italic;
+  padding-top: 10px;
+  color: #9c9c9c;
+}
 .banner {
+  margin-top: 30px;
   text-align: center;
   font-family: Georgia, serif;
 }
@@ -27,14 +35,18 @@ body {
 .navigation ul.navigation-list li {
   width: 100px;
   height: 25px;
-  padding: 8px;
-  font-size: 15px;
+  padding-top: 8px;
+  padding-bottom: 0px;
+  padding-left: 13px;
+  padding-right: 13px;
+  font-size: 13px;
   list-style-type: none;
   display: inline-block;
   color: #1c1c1a;
   cursor: pointer;
   vertical-align: bottom;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .navigation ul.navigation-list li a,
 .navigation ul.navigation-list li a:visited {
@@ -55,7 +67,7 @@ body {
   display: none;
   background-color: #fff;
   position: absolute;
-  top: 35px;
+  top: 30px;
   width: 98px;
 }
 .navigation ul.navigation-list li.range .menu a {
@@ -78,25 +90,38 @@ body {
   border-top-color: rgba(0,0,0,0);
 }
 .home-content {
-  background-image: url("../img/purple-candle.jpg");
+  height: 500px;
+  over-flow: hidden;
+}
+.home-content .slide-wrap a.slide {
+  height: 500px;
+  background-position: 50% 20%;
   background-size: cover;
-  background-position: 50% 30%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.home-content .slide-wrap a.slide .item-name {
+  color: #fff;
+  font-size: 76px;
+  text-shadow: 2px 2px 10px #000;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.home-content .slide-wrap a.slide .item-description {
+  color: #fff;
+  text-shadow: 2px 2px 10px #000;
+}
+.goods {
   height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.home-content .explore {
-  background-color: rgba(0,0,0,0);
-  border-radius: 10px;
-  border: 3px solid #fff;
-  flex: initial;
-  color: #fff;
-  font-family: helvetica;
-  font-size: 20px;
-  width: 150px;
-  height: 40px;
-  cursor: pointer;
 }
 footer {
   margin-top: 15px;
@@ -129,41 +154,4 @@ footer section ul li a:visited {
 }
 footer section ul li a:hover {
   text-decoration: underline;
-}
-.ui-view-container {
-  position: relative;
-}
-[ui-view].ng-enter,
-[ui-view].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-[ui-view].ng-enter {
-  opacity: 0;
-  -webkit-transform: scale3d(0.5, 0.5, 0.5);
-  -moz-transform: scale3d(0.5, 0.5, 0.5);
-  transform: scale3d(0.5, 0.5, 0.5);
-}
-[ui-view].ng-enter-active {
-  opacity: 1;
-  -webkit-transform: scale3d(1, 1, 1);
-  -moz-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
-}
-[ui-view].ng-leave {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-[ui-view].ng-leave-active {
-  opacity: 0;
-  -webkit-transform: translate3d(100px, 0, 0);
-  -moz-transform: translate3d(100px, 0, 0);
-  transform: translate3d(100px, 0, 0);
 }

@@ -1,7 +1,7 @@
 (function(){
     "use strict";
 
-    angular.module("boutique",["ngResource","ngAnimate","ngSanitize","ui.router","boutique.controllers","boutique.services"])
+    angular.module("boutique",["ngResource","ngAnimate","ngSanitize","ui.router","boutique.controllers","boutique.services",'slick'])
     .config(function($stateProvider,$urlRouterProvider){
         $stateProvider
         .state("home",{

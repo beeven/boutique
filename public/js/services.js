@@ -6,25 +6,25 @@ angular.module("boutique.services",["ngResource"])
         var goods = [
             {
                 name: "Aroma",
-                description: "",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis <i>cursus</i> sagittis ipsum. Praesent mauris. Fusce nec <i>diam.</i>",
                 links: ["http://www.google.com","http://www.yahoo.com"],
-                backgroundImage: "img/purple-candle.jpg",
+                backgroundImage: "url('img/purple-candle.jpg')",
                 price: 100,
                 pics: []
             },
             {
                 name: "Beauty",
-                description: "",
+                description: " Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.",
                 links: ["http://www.google.com","http://www.yahoo.com"],
-                backgroundImage: "img/interior_romance.jpg",
+                backgroundImage: "url('img/interior_romance.jpg')",
                 price: 150,
                 pics: []
             },
             {
                 name: "Care",
-                description: "",
+                description: "<i>Proin</i> Fusce ac <i>porttitor.</i> turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec <i>aptent</i> ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis <i>litora</i> turpis. Nulla facilisi. Ut <i>ante.</i> fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum <i>cursus</i> sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem,",
                 links: ["http://www.google.com","http://www.yahoo.com"],
-                backgroundImage: "aromatherapy.jpg",
+                backgroundImage: "url('img/aromatherapy.jpg')",
                 price: 180,
                 pics: []
             },
@@ -43,6 +43,10 @@ angular.module("boutique.services",["ngResource"])
                 }
             }
         };
-    });
+    })
+    .factory('Blogs',function($http){
+
+    })
+    ;
 
 })();

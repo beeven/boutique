@@ -1,9 +1,9 @@
 <div class="home-content">
-    <slick>
+    <slick class="slides" infinite="true" autoplay="true" autoplay-speed="5000" fade="true" easing="linear" speed="800">
         <div class="slide-wrap" ng-repeat="item in goods">
-            <a href="#/range/{{item.name}}" class="slide">
-                <img ng-src="item.backgroundImage" alt="">
-                <span class="description">{{item.description}}</span>
+            <a href="#/range/{{item.name}}" class="slide" ng-style="{'background-image':item.backgroundImage}">
+                <h1 class="item-name">{{item.name}}</h1>
+                <span class="item-description" ng-bind-html="item.description"></span>
             </a>
         </div>
     </slick>

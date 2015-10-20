@@ -3,6 +3,10 @@ body {
   padding: 0px;
   margin: 0px;
 }
+@font-face {
+  font-family: csb_italic;
+  src: url("../font/csb_italic.woff");
+}
 .account-bar {
   height: 20px;
   padding-left: 50px;
@@ -13,7 +17,10 @@ body {
 .banner {
   margin-top: 30px;
   text-align: center;
-  font-family: Georgia, serif;
+  font-family: 'csb_italic', serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 20px;
 }
 .drop-down-indicator::before {
   content: "\02C7";

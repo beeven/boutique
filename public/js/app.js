@@ -24,11 +24,30 @@
         })
         .state("blog",{
             url:"/blog",
-            templateUrl:"templates/blog.html"
+            templateUrl:"templates/blog.html",
+            controller: "BlogCtrl"
         })
         .state("policy",{
-            url:"/policy/:name",
-            templateUrl:"templates/policy.html"
+            url:"/policy",
+            abstract: true
+        })
+        .state("policy.return",{
+            url:"/return",
+            views:{
+                "@":{
+                    templateUrl:"templates/return_policy.html"
+                }
+            }
+
+        })
+        .state("policy.delivery",{
+            url:"/delivery",
+            views: {
+                "@":{
+                    templateUrl:"templates/delivery.html"
+                }
+            }
+
         })
         .state("faq",{
             url:"/faq",

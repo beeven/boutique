@@ -162,3 +162,9 @@ footer section ul li a:visited {
 footer section ul li a:hover {
   text-decoration: underline;
 }
+.policy {
+  padding-left: 20px;
+  padding-right: 100px;
+  min-height: 300px;
+  color: #6c6c6c;
+}

@@ -11,6 +11,12 @@ angular.module("boutique.controllers",["boutique.services"])
 .controller("GoodsCtrl",function($scope,Goods,$stateParams){
     $scope.goodName = $stateParams.name;
 })
+.controller("BlogCtrl",function($scope, Blog){
+    Blog.get().then(function(data){
+        $scope.posts = data.posts;
+        console.log(data);
+    })
+})
 ;
 
 })();

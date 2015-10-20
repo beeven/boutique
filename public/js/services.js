@@ -44,8 +44,16 @@ angular.module("boutique.services",["ngResource"])
             }
         };
     })
-    .factory('Blogs',function($http){
+    .factory('Blog',function($http){
 
+        return {
+            get: function(){
+                return $http.jsonp("http://beeven.tumblr.com/api/read/json?callback=JSON_CALLBACK")
+                            .then(function(res){
+                                return res.data;
+                            })
+            }
+        }
     })
     ;
 

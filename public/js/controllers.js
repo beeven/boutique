@@ -1,6 +1,9 @@
-"use strict";
+(function(){
+    "use strict";
 
 angular.module("boutique.controllers",["boutique.services"])
-.controller("HeaderCtrl",function($scope){
-
+.controller("HomeCtrl",function($scope,Goods){
+    $scope.goods = Goods.all();
 });
+
+})();

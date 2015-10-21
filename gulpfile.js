@@ -1,8 +1,5 @@
 var gulp = require('gulp');
-var gutil = require('gulp-util');
-var concat = require('gulp-concat');
-var minifyCss = require('gulp-minify-css');
-var rename = require('gulp-rename');
+
 var stylus = require('gulp-stylus');
 
 var paths = {
@@ -18,7 +15,7 @@ gulp.task('stylus', function(done){
         }))
         .pipe(gulp.dest('./public/css'))
         .on('end',done);
-})
+});
 
 gulp.task('watch', function() {
   gulp.watch(paths.stylus, ['stylus']);

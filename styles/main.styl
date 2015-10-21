@@ -4,6 +4,10 @@ html,body
 
 @font-face { font-family: csb_italic; src: url('../font/csb_italic.woff'); }
 
+.page-wrap
+    max-width 1024px
+    margin-left auto
+    margin-right auto
 
 @import header
 @import home
@@ -53,3 +57,35 @@ html,body
 //   -moz-transform:translate3d(100px, 0, 0);
 //   transform:translate3d(100px, 0, 0);
 // }
+
+.ui-view-container {
+    position:relative;
+    height: 500px
+}
+
+[ui-view] {
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transition: all .5s ease-in-out
+}
+
+[ui-view].ng-enter {
+    opacity: 0
+    //left: -100%
+}
+
+[ui-view].ng-enter-active {
+    opacity: 1
+    //left: 0
+}
+
+[ui-view].ng-leave {
+    opacity: 1
+}
+
+[ui-view].ng-leave-active {
+    opacity: 0
+}

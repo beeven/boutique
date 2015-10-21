@@ -7,6 +7,10 @@ angular.module("boutique.controllers",["boutique.services"])
 })
 .controller("HomeCtrl",function($scope,Goods){
     $scope.goods = Goods.all();
+    $scope.selected = $scope.goods[0];
+    $scope.select = function(item){
+        $scope.selected = item;
+    };
 })
 .controller("GoodsCtrl",function($scope,Goods,$stateParams){
     $scope.goodName = $stateParams.name;

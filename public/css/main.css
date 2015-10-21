@@ -7,6 +7,11 @@ body {
   font-family: csb_italic;
   src: url("../font/csb_italic.woff");
 }
+.page-wrap {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .account-bar {
   height: 20px;
   padding-left: 50px;
@@ -37,7 +42,10 @@ body {
   text-align: center;
   position: relative;
   margin: 0px;
+  margin-bottom: 8px;
   z-index: 10;
+  border-top: 2px solid #4a4a4a;
+  border-bottom: 1px solid #c7c7c7;
 }
 .navigation ul.navigation-list li {
   width: 100px;
@@ -99,30 +107,57 @@ body {
 .home-content {
   height: 500px;
   over-flow: hidden;
-}
-.home-content .slide-wrap a.slide {
-  height: 500px;
-  background-position: 50% 20%;
-  background-size: cover;
-  text-decoration: none;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 150px;
-  padding-right: 150px;
 }
-.home-content .slide-wrap a.slide .item-name {
-  color: #fff;
-  font-size: 76px;
-  text-shadow: 2px 2px 10px #000;
-  letter-spacing: 3px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+.home-content .preview {
+  flex: 1;
+  height: 100%;
 }
-.home-content .slide-wrap a.slide .item-description {
+.home-content .preview a {
+  display: block;
+  background-size: cover;
+  height: 100%;
+  transition: background-image 500ms ease;
+}
+.home-content .thumbnails {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+.home-content .thumbnails .thumbnail {
+  width: 140px;
+  height: 100px;
+}
+.home-content .thumbnails .thumbnail a,
+.home-content .thumbnails .thumbnail a:visited {
+  display: block;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
   color: #fff;
-  text-shadow: 2px 2px 10px #000;
+  text-align: center;
+  line-height: 100px;
+  text-decoration: none;
+  font-size: 25px;
+  text-shadow: 2px 2px 8px #000;
+  font-family: 'csb_italic';
+  box-shadow: 1px 1px 8px #000;
+}
+.home-content .thumbnails .thumbnail:first-child {
+  position: relative;
+  top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-content .thumbnails .thumbnail:nth-of-type(2) {
+  top: 250px;
+  position: absolute;
+  left: 15%;
+}
+.home-content .thumbnails .thumbnail:nth-of-type(3) {
+  top: 250px;
+  position: absolute;
+  right: 15%;
 }
 .goods {
   height: 500px;
@@ -167,4 +202,28 @@ footer section ul li a:hover {
   padding-right: 100px;
   min-height: 300px;
   color: #6c6c6c;
+}
+.ui-view-container {
+  position: relative;
+  height: 500px;
+}
+[ui-view] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+[ui-view].ng-enter {
+  opacity: 0;
+}
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+[ui-view].ng-leave {
+  opacity: 1;
+}
+[ui-view].ng-leave-active {
+  opacity: 0;
 }

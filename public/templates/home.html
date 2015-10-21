@@ -1,10 +1,13 @@
 <div class="home-content">
-    <slick class="slides" infinite="true" autoplay="true" autoplay-speed="5000" fade="true" easing="linear" speed="800">
-        <div class="slide-wrap" ng-repeat="item in goods">
-            <a href="#/range/{{item.name}}" class="slide" ng-style="{'background-image':item.backgroundImage}">
-                <h1 class="item-name">{{item.name}}</h1>
-                <span class="item-description" ng-bind-html="item.description"></span>
+    <div class="preview">
+        <a href="#/range/{{selected.name}}" ng-style="{'background-image':selected.backgroundImage}">
+        </a>
+    </div>
+    <div class="thumbnails">
+        <div class="thumbnail" ng-repeat="item in goods">
+            <a href="#/range/{{item.name}}" ng-style="{'background-image':item.backgroundImage}" ng-mouseover="select(item)">
+                {{item.name}}
             </a>
         </div>
-    </slick>
+    </div>
 </div>
